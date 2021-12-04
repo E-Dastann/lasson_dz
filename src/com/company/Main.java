@@ -1,18 +1,20 @@
 package com.company;
 
+import java.util.Random;
+
 public class Main {
 
     public static void main(String[] args) {
         System.out.println(1);
-        name(23,34);
+        name(23,generateRandomAge());
         System.out.println(2);
-        name(12,37);
+        name(12,generateRandomAge());
         System.out.println(3);
-        name(21,13);
+        name(21,generateRandomAge());
         System.out.println(4);
-        name(15,17);
+        name(15,generateRandomAge());
         System.out.println(5);
-        name(38,33);
+        name(38,generateRandomAge());
     }
 
 
@@ -32,5 +34,11 @@ public class Main {
         }
 
         return String.valueOf(age+temperature);
+    }
+    public static int generateRandomAge(){
+        final Random random = new Random();
+        int randomNumber=random.nextInt(100)+1;
+        System.out.println(randomNumber);
+        return randomNumber;
     }
 }
